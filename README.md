@@ -2,7 +2,7 @@
 
 ## Development server
 
-Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm run start` for a dev server. Navigate to [http://localhost:4200/](http://localhost:4200/). The app will automatically reload if you change any of the source files.
 
 ## Build
 
@@ -16,6 +16,10 @@ Run `npm run test` to execute the unit tests via [Karma](https://karma-runner.gi
 
 Run `npm run e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Serve the project
+## Serve the server side rendered build
 
-Run `npm run serve:ssr` to serve a production build at `http://localhost:4000/`.
+Run `npm run serve:ssr` to serve a production build at [http://localhost:4000/](http://localhost:4000/).
+
+## Serve the static rendered build
+
+Run `npm run serve:static` to serve a production build at [http://localhost:5000/](http://localhost:5000/).
