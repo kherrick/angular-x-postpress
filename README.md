@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 
+## @nguniversal/express-engine
+
+After generation, server side rendering capabilities were added via the following:
+
+* `npx ng add @nguniversal/express-engine --clientProject angular-x-postpress`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
