@@ -1,13 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { PLATFORM_ID, CUSTOM_ELEMENTS_SCHEMA, inject, NgModule, Inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { FormsModule } from '@angular/forms';
-import { OrigamiModule } from '@codebakery/origami';
 
-import 'x-postpress/build/esm-bundled/src/components/x-postpress'
+declare var require: any;
 
 @NgModule({
   declarations: [
@@ -15,7 +15,6 @@ import 'x-postpress/build/esm-bundled/src/components/x-postpress'
   ],
   imports: [
     FormsModule,
-    OrigamiModule,
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule
   ],
@@ -23,4 +22,13 @@ import 'x-postpress/build/esm-bundled/src/components/x-postpress'
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule { }
+
+export class AppModule {
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
+    if (isPlatformBrowser(platformId)) {
+      require('x-postpress/build/esm-bundled/src/components/x-postpress')
+    }
+  }
+}
