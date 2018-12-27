@@ -1,6 +1,6 @@
 {
   "name": "angular-x-postpress",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "build:client-and-server-bundles": "npx ng build --prod && npx ng run angular-x-postpress:server:production",
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",

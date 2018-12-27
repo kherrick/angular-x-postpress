@@ -1,11 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { PLATFORM_ID, CUSTOM_ELEMENTS_SCHEMA, inject, NgModule, Inject } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { AppRoutingModule } from './app-routing.module';
+import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { isPlatformBrowser } from '@angular/common';
+import { PLATFORM_ID, CUSTOM_ELEMENTS_SCHEMA, NgModule, Inject } from '@angular/core';
 
 declare var require: any;
 
@@ -14,9 +12,9 @@ declare var require: any;
     AppComponent
   ],
   imports: [
-    FormsModule,
+    AppRoutingModule,
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    AppRoutingModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
