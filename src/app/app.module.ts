@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { OrigamiModule } from '@codebakery/origami';
 
+import 'x-postpress/build/esm-bundled/src/components/x-postpress'
+
 @NgModule({
   declarations: [
     AppComponent

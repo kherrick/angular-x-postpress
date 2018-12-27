@@ -33,6 +33,7 @@
     "express": "^4.15.2",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
+    "x-postpress": "^1.1.1",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
