@@ -26,7 +26,7 @@ export class AppModule {
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
     if (isPlatformBrowser(platformId)) {
-      require('x-postpress/build/esm-bundled/src/components/x-postpress')
+      require('x-postpress/build/es5-bundled/src/components/x-postpress')
     }
   }
 }
