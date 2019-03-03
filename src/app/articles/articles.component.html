@@ -1,0 +1,15 @@
+<x-postpress
+  apihost="https://content.example.com"
+  per_page="2"
+>
+  <div slot="articles">
+    <article>
+      <h1><a href="{{ articleUrl }}">
+        {{ articleTitle }}
+      </a></h1>
+      <h2>{{ articleDate }}</h2>
+      <p>{{ articleParagraph }}</p>
+      <hr>
+    </article>
+  </div>
+</x-postpress>

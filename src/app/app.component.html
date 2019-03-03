@@ -1,17 +1,28 @@
-<x-postpress
-  apihost="https://content.example.com"
-  per_page="2"
->
-  <div slot="articles">
-    <article>
-      <h1><a href="https://example.com/1970/01/01/slotted/">
-        {{ title }}
-      </a></h1>
-      <h2>Thursday, 01 January 1970</h2>
-      <p>Lorem ipsum dolor sit amet</p>
-      <hr>
-    </article>
-  </div>
-</x-postpress>
+<header>
+  <nav>
+    <ul>
+      <li>
+        <a
+          [routerLinkActiveOptions]="{exact:true}"
+          href="/"
+          routerLink="/"
+          routerLinkActive="active-link"
+        >
+          {{ home }}
+        </a>
+      </li>
+      <li>
+        <a
+          [routerLinkActiveOptions]="{exact:true}"
+          href="/articles"
+          routerLink="/articles"
+          routerLinkActive="active-link"
+        >
+          {{ articles }}
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
 
 <router-outlet></router-outlet>
