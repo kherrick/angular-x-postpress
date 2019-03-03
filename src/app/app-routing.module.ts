@@ -1,10 +1,10 @@
-import { ArticlesComponent } from './articles/articles.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'articles', component: ArticlesComponent
+    path: 'articles',
+    loadChildren: './articles/articles.module#ArticlesModule'
   }
 ];
 
@@ -12,4 +12,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+
+export class AppRoutingModule {}
