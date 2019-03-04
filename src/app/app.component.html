@@ -21,6 +21,16 @@
           {{ articles }}
         </a>
       </li>
+      <li>
+        <a
+          [routerLinkActiveOptions]="{exact:true}"
+          href="/about"
+          routerLink="/about"
+          routerLinkActive="active-link"
+        >
+          {{ about }}
+        </a>
+      </li>
     </ul>
   </nav>
 </header>
