@@ -1,11 +1,11 @@
-import { AboutComponent } from './about.component';
+import { RatesComponent } from './rates.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
     path: '',
-    component: AboutComponent
+    component: RatesComponent
   }
 ];
 
@@ -14,4 +14,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 
-export class AboutRoutingModule {}
+export class RatesRoutingModule {}

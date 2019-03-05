@@ -9,7 +9,7 @@ import { NgModule } from '@angular/core';
   imports: [
     AppRoutingModule,
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    FormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,15 +1,15 @@
-li {
+nav li {
   display: inline-block;
   list-style: none;
 }
 
-li > a {
+nav a {
   background-color: #ccc;
   color: black;
   padding: 0.5rem;
   text-decoration: none;
 }
 
-li > a.active-link {
+nav a.active-link {
   background-color: #aaa;
 }

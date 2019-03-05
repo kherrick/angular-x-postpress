@@ -1,0 +1,30 @@
+<x-postpress>
+  <div slot="articles">
+    <article>
+        <h1>The Rates component uses ideas from:</h1>
+        <ul>
+          <li><a href="https://www.apollographql.com/docs/angular/basics/setup.html">https://www.apollographql.com/docs/angular/basics/setup.html</a></li>
+          <li><a href="https://github.com/patricknazar/angular-lazy-loading-apollo-client">https://github.com/patricknazar/angular-lazy-loading-apollo-client</a></li>
+          <li><a href="https://o5x5jzoo7z.sse.codesandbox.io/graphql">https://o5x5jzoo7z.sse.codesandbox.io/graphql</a></li>
+        </ul>
+
+        <p><em>Make sure to load <a href="https://o5x5jzoo7z.sse.codesandbox.io/graphql">the codesandbox</a> (for the GraphQL API) in another tab while testing, otherwise you'll see errors in devtools and the rates will not load.</em></p>
+        <p>The mock rates will be rendered on the server (JavaScript not required on the client) if <a href="https://github.com/kherrick/angular-x-postpress">angular-x-postpress</a> is loaded using:</p>
+        <p><code>npm run build:ssr && npm run serve:ssr</code></p>
+
+        <hr />
+
+        <div *ngIf="loading">
+          Loading...
+        </div>
+        <div *ngIf="error">
+          Error :(
+        </div>
+        <div *ngIf="rates">
+          <div *ngFor="let rate of rates">
+            <p>{{rate.currency}}: {{rate.rate}}</p>
+          </div>
+        </div>
+      </article>
+  </div>
+</x-postpress>

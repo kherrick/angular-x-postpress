@@ -1,0 +1,18 @@
+<x-postpress>
+  <div slot="articles">
+    <article>
+        <h1><a href="https://www.npmjs.com/package/x-postpress">About x-postpress</a></h1>
+        <p><a href="https://github.com/kherrick/x-postpress">x-postpress</a> is a <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components">Web Component</a> that fetches <a href="https://wordpress.org/">WordPress</a> posts from <a href="https://developer.wordpress.org/rest-api/reference/posts/#list-posts">the REST API</a> based on attributes set on the element. It's built using <a href="https://lit-element.polymer-project.org/">LitElement</a> and hosted on npm. To try it out, add a script tag to your document:</p>
+        <pre>&lt;script
+  type="module"
+  src="https://unpkg.com/x-postpress"
+&gt;
+&lt;/script&gt;</pre><p>Then declare the x-postpress element with the apiHost attribute set to the appropriate WordPress installation:</p><pre>&lt;x-postpress
+  apiHost="https://content.example.com"
+&gt;
+&lt;/x-postpress&gt;
+        </pre>
+        <hr>
+      </article>
+  </div>
+</x-postpress>
