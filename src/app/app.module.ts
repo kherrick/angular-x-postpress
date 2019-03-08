@@ -8,7 +8,7 @@ import { NgModule } from '@angular/core';
   declarations: [AppComponent],
   imports: [
     AppRoutingModule,
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule,
     FormsModule
   ],
   providers: [],

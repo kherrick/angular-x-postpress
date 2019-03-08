@@ -2,14 +2,11 @@
   "name": "angular-x-postpress",
   "version": "1.1.1",
   "scripts": {
-    "build:client-and-server-bundles": "npx ng build --prod && npx ng run angular-x-postpress:server:production",
-    "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
     "build": "npx ng build",
-    "compile:server": "npx webpack --config webpack.server.config.js --progress --colors",
+    "build:prod": "npx ng build --prod",
     "e2e": "npx ng e2e",
     "lint": "npx ng lint",
     "ng": "npx ng",
-    "serve:ssr": "node dist/server",
     "serve:static": "npx serve -s dist/browser",
     "start": "npx ng serve",
     "test": "npx ng test"
