@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+readonly PROJECT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/.."
+
+cd "${PROJECT_ROOT}" || exit 1
+
+rm -rf ./dist ./node_modules && npm i || exit 1
+
+# apply hash routing patch for gh-pages, and build
+sed -i.bak 's/RouterModule.forRoot(routes)/RouterModule.forRoot(routes, { useHash: true })/g' ./src/app/app-routing.module.ts \
+  && npm run build:client-for-gh-pages \
+  && mv ./src/app/app-routing.module.ts.bak ./src/app/app-routing.module.ts \
+  || exit 1
+
+# touch no jekyll file to get node_modules, and deploy the bundle
+touch ./dist/browser/.nojekyll \
+  && npx gh-pages --dotfiles --dist ./dist/browser/
