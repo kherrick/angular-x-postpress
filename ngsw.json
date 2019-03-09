@@ -1,0 +1,84 @@
+{
+  "configVersion": 1,
+  "timestamp": 1553463211462,
+  "index": "/angular-x-postpress/#/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/angular-x-postpress/#/5.c43fca2a11b8584e7d42.js",
+        "/angular-x-postpress/#/6.a73951869101ca4b5192.js",
+        "/angular-x-postpress/#/7.689a1f2a77c66a087e31.js",
+        "/angular-x-postpress/#/8.add2f0ec13cda556e7d7.js",
+        "/angular-x-postpress/#/es2015-polyfills.1e04665e16f944715fd2.js",
+        "/angular-x-postpress/#/favicon.ico",
+        "/angular-x-postpress/#/index.html",
+        "/angular-x-postpress/#/main.f5956eab088d51ccf9eb.js",
+        "/angular-x-postpress/#/polyfills.ecc3dc6384a27fa16a97.js",
+        "/angular-x-postpress/#/runtime.2c8973cea241587a82cb.js",
+        "/angular-x-postpress/#/styles.0e4338761429b4eb16ac.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/angular-x-postpress/#/assets/icons/icon-128x128.png",
+        "/angular-x-postpress/#/assets/icons/icon-144x144.png",
+        "/angular-x-postpress/#/assets/icons/icon-152x152.png",
+        "/angular-x-postpress/#/assets/icons/icon-192x192.png",
+        "/angular-x-postpress/#/assets/icons/icon-384x384.png",
+        "/angular-x-postpress/#/assets/icons/icon-48x48.png",
+        "/angular-x-postpress/#/assets/icons/icon-512x512.png",
+        "/angular-x-postpress/#/assets/icons/icon-72x72.png",
+        "/angular-x-postpress/#/assets/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/angular-x-postpress/#/5.c43fca2a11b8584e7d42.js": "2da5330716393aeeb4a10ef024ee412c042d5844",
+    "/angular-x-postpress/#/6.a73951869101ca4b5192.js": "e16f533f7303230ab4ec8051c63d1657392dd1c5",
+    "/angular-x-postpress/#/7.689a1f2a77c66a087e31.js": "5ad3b812c9ad232ea7c3a398d193a03d1627512f",
+    "/angular-x-postpress/#/8.add2f0ec13cda556e7d7.js": "aea91afe9221886a7519605447b9e3e5add93385",
+    "/angular-x-postpress/#/assets/icons/icon-128x128.png": "cf335cea1a9704194786b680c757110c839852db",
+    "/angular-x-postpress/#/assets/icons/icon-144x144.png": "e6b484dda3747c9a17f2c5dcd96546b38f48afc5",
+    "/angular-x-postpress/#/assets/icons/icon-152x152.png": "4e496104196cb2148757db1d709701cd284631fd",
+    "/angular-x-postpress/#/assets/icons/icon-192x192.png": "61691c7b8b9dda5387302ae211f79bb69470c125",
+    "/angular-x-postpress/#/assets/icons/icon-384x384.png": "974e9b43a8a12230f83e0fef18de5136ca767261",
+    "/angular-x-postpress/#/assets/icons/icon-48x48.png": "0df41bf03d2ed269ef2b2573b3c7862be5ee0e26",
+    "/angular-x-postpress/#/assets/icons/icon-512x512.png": "ba9a2923918bc7a19eb63e38a622b43d14437ee1",
+    "/angular-x-postpress/#/assets/icons/icon-72x72.png": "7a29003607f21c8e2e3f13b8c0a40068e5079a19",
+    "/angular-x-postpress/#/assets/icons/icon-96x96.png": "c2eb0d87f5d8661d55ef72788d4e0d04ed5f167e",
+    "/angular-x-postpress/#/es2015-polyfills.1e04665e16f944715fd2.js": "b7a81c61d32b0b12737f0c13f45973ba391cd7f9",
+    "/angular-x-postpress/#/favicon.ico": "159794e2895e087c4cde66f7a50cd1df080555dd",
+    "/angular-x-postpress/#/index.html": "a54cc9b6b0372fc6f96f4c8f2189fb9466807024",
+    "/angular-x-postpress/#/main.f5956eab088d51ccf9eb.js": "678281a9f69a7e018987153ca589ae13e4073c20",
+    "/angular-x-postpress/#/polyfills.ecc3dc6384a27fa16a97.js": "437cd7f03163e5184a548e7cb1675126ddcf9013",
+    "/angular-x-postpress/#/runtime.2c8973cea241587a82cb.js": "89bf9c329d363a5bef534b91de8335bec1794bb0",
+    "/angular-x-postpress/#/styles.0e4338761429b4eb16ac.css": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
