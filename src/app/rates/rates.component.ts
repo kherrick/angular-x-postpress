@@ -1,6 +1,11 @@
 import { Apollo } from 'apollo-angular';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { PLATFORM_ID, Inject } from '@angular/core';
 import gql from 'graphql-tag';
+
+// workaround for - error TS2580: Cannot find name 'require'
+declare var require: any;
 
 @Component({
   selector: 'app-rates',
@@ -14,7 +19,11 @@ export class RatesComponent implements OnInit {
   loading = true;
   error: any;
 
-  constructor(private apollo: Apollo) {}
+  constructor(private apollo: Apollo, @Inject(PLATFORM_ID) private platformId: Object) {
+    if (isPlatformBrowser(platformId)) {
+      require('x-postpress/build/es5-bundled/src/components/x-postpress')
+    }
+  }
 
   ngOnInit() {
     this.apollo

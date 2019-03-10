@@ -12,10 +12,9 @@ a:hover {
 article {
   clear: inherit;
   margin-bottom: 1rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 2rem;
+  margin-right: 2rem;
   margin-top: 0;
-  width: 80%;
 }
 
 h1 {
@@ -64,10 +63,10 @@ x-postpress {
   --a-hover-text-decoration: underline;
   --article-clear: inherit;
   --article-margin-bottom: 1rem;
-  --article-margin-left: auto;
-  --article-margin-right: auto;
+  --article-margin-left: 2rem;
+  --article-margin-right: 2rem;
   --article-margin-top: 0;
-  --article-width: 80%;
+  --article-width: auto;
   --h2-color: #333;
   --h2-font-size: smaller;
   --hr-clear: both;

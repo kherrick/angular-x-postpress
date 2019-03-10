@@ -1,4 +1,9 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { PLATFORM_ID, Inject } from '@angular/core';
+
+// workaround for - error TS2580: Cannot find name 'require'
+declare var require: any;
 
 @Component({
   selector: 'app-articles',
@@ -15,7 +20,13 @@ export class ArticlesComponent implements OnInit {
   public articleParagraph = `This article can be dynamically generated, but is currently defined within the source.
     The articles that load below, are client side only, and fetched from a WordPress REST API.`;
 
-  constructor() {}
+    constructor(
+      @Inject(PLATFORM_ID) private platformId: Object
+    ) {
+      if (isPlatformBrowser(platformId)) {
+        require('x-postpress/build/es5-bundled/src/components/x-postpress')
+      }
+    }
 
   ngOnInit() {}
 }

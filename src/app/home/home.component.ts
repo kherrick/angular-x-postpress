@@ -1,4 +1,9 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { PLATFORM_ID, Inject } from '@angular/core';
+
+// workaround for - error TS2580: Cannot find name 'require'
+declare var require: any;
 
 @Component({
   selector: 'app-home',
@@ -14,7 +19,16 @@ export class HomeComponent implements OnInit {
 
   public articleParagraph = 'Lorem ipsum dolor sit amet';
 
-  constructor() {}
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
+    if (isPlatformBrowser(platformId)) {
+      require('@authentic/mwc-textfield')
+      require('@material/mwc-button')
+      require('@material/mwc-formfield')
+      require('x-postpress/build/es5-bundled/src/components/x-postpress')
+    }
+  }
 
   ngOnInit() {}
 }
