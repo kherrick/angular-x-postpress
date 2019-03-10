@@ -1,0 +1,31 @@
+<p>
+  name-editor works!
+</p>
+
+
+<!-- <form> -->
+
+  <label>
+    First Name:
+    <input name="firstName" type="text" [formControl]="firstName" value="foo" />
+  </label>
+
+  <label>
+    Last Name:
+    <input name="lastName" type="text" [formControl]="lastName" value="bar" />
+  </label>
+
+  <p>
+    <button (click)="updateName()">Update Name</button>
+  </p>
+
+
+
+  <p>
+    firstName value: {{ firstName.value }}
+  </p>
+
+  <p>
+    lastName value: {{ lastName.value }}
+  </p>
+<!-- </form> -->
