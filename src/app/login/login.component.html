@@ -1,31 +1,25 @@
-<p>
-  name-editor works!
-</p>
-
-
-<!-- <form> -->
-
-  <label>
-    First Name:
-    <input name="firstName" type="text" [formControl]="firstName" value="foo" />
-  </label>
-
-  <label>
-    Last Name:
-    <input name="lastName" type="text" [formControl]="lastName" value="bar" />
-  </label>
-
-  <p>
-    <button (click)="updateName()">Update Name</button>
-  </p>
-
-
-
-  <p>
-    firstName value: {{ firstName.value }}
-  </p>
-
-  <p>
-    lastName value: {{ lastName.value }}
-  </p>
-<!-- </form> -->
+<form class="" [formGroup]="login">
+  <div class="row">
+    <div class="column">
+      First Name:
+    </div>
+    <div class="column flex_2">
+      <input type="text" formControlName="firstName" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      Last Name:
+    </div>
+    <div class="column flex_2">
+      <input type="text" formControlName="lastName" />
+    </div>
+  </div>
+  <div class="row end">
+    <div class="column submit">
+      <button (click)="doNotSubmit()">Do not submit</button>
+      &nbsp;
+      <button (click)="onSubmit()" type="submit" [disabled]="!login.valid">Submit</button>
+    </div>
+  </div>
+</form>
