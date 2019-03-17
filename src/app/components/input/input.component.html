@@ -1,0 +1,4 @@
+<slot (slotchange)="slotChange($event)">
+  <label>{{ label }}</label>
+  <input autocomplete="off" (change)="onChange($event)" type="{{ type }}" />
+</slot>

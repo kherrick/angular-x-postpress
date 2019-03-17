@@ -8,7 +8,5 @@ import { Component, ViewEncapsulation } from '@angular/core';
 })
 
 export class AppComponent {
-  public home = 'Home';
-  public articles = 'Articles';
-  public rates = 'Rates';
+  title = 'angular-x-postpress';
 }

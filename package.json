@@ -1,17 +1,17 @@
 {
   "name": "angular-x-postpress",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "scripts": {
     "build:client-for-gh-pages": "npx ng build --prod --base-href /angular-x-postpress/",
-    "build": "npx ng build",
-    "build:prod": "npx ng build --prod",
-    "e2e": "npx ng e2e",
+    "build:prod": "ng build --prod",
+    "build": "ng build",
     "deploy:gh-pages": "./bin/deploy-gh-pages",
-    "lint": "npx ng lint",
-    "ng": "npx ng",
+    "e2e": "ng e2e",
+    "lint": "ng lint",
+    "ng": "ng",
     "serve:static": "npx serve -s dist/browser",
-    "start": "npx ng serve",
-    "test": "npx ng test"
+    "start": "ng serve --host 0.0.0.0",
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
@@ -19,6 +19,7 @@
     "@angular/common": "^7.2.7",
     "@angular/compiler": "^7.2.7",
     "@angular/core": "^7.2.7",
+    "@angular/elements": "^7.2.9",
     "@angular/forms": "^7.2.7",
     "@angular/http": "^7.2.7",
     "@angular/platform-browser": "^7.2.7",
@@ -28,6 +29,7 @@
     "@codebakery/origami": "^3.1.0",
     "@nguniversal/express-engine": "^7.1.0",
     "@nguniversal/module-map-ngfactory-loader": "^7.1.0",
+    "@webcomponents/custom-elements": "^1.2.1",
     "@webcomponents/webcomponentsjs": "^2.2.7",
     "apollo-angular": "^1.5.0",
     "apollo-angular-link-http": "^1.5.0",
@@ -41,13 +43,13 @@
     "graphql-tag": "^2.10.1",
     "rxjs": "^6.4.0",
     "tslib": "^1.9.3",
-    "typescript": "^3.2.4",
+    "typescript": "3.2.4",
     "x-postpress": "^2.1.10",
     "zone.js": "^0.8.29"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.13.4",
-    "@angular/cli": "^7.3.4",
+    "@angular/cli": "~7.3.5",
     "@angular/compiler-cli": "^7.2.7",
     "@angular/language-service": "^7.2.7",
     "@polymer/esm-amd-loader": "^1.0.4",

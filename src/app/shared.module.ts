@@ -19,7 +19,6 @@ import { HttpClientModule } from '@angular/common/http';
 })
 
 export class SharedModule {
-
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: SharedModule,
@@ -31,7 +30,8 @@ export class SharedModule {
     apollo: Apollo,
     httpLink: HttpLink,
   ) {
-    const uri = 'https://o5x5jzoo7z.sse.codesandbox.io/graphql'; //our test Graphql Server which returns rates
+    // our test Graphql Server which returns rates
+    const uri = 'https://o5x5jzoo7z.sse.codesandbox.io/graphql';
 
     apollo.create({
       link: httpLink.create({ uri }),

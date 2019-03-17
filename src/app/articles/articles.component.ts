@@ -1,3 +1,6 @@
+// fetch for ie11, not site wide
+import 'fetch-polyfill/fetch';
+import 'x-postpress/build/es5-bundled/src/components/x-postpress';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({

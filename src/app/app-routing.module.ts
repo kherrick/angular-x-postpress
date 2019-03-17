@@ -4,6 +4,10 @@ import { SharedModule } from './shared.module';
 
 const routes: Routes = [
   {
+    path: 'admin',
+    loadChildren: './admin/admin.module#AdminModule'
+  },
+  {
     path: 'articles',
     loadChildren: './articles/articles.module#ArticlesModule'
   },

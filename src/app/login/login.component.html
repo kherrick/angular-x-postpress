@@ -1,0 +1,17 @@
+<slot (slotchange)="slotChange($event)">
+  <h2>Login</h2>
+
+  <form>
+    <div style="padding: 1rem;">
+      <app-input #user label="Username" type="text"></app-input>
+    </div>
+
+    <div style="padding: 1rem;">
+      <app-input #pass label="Password" type="password"></app-input>
+    </div>
+
+    <div style="padding: 1rem;">
+      <app-button (click)="onSubmit($event)" text="Submit" type="submit"></app-button>
+    </div>
+  </form>
+</slot>

@@ -1,0 +1,48 @@
+<slot (slotchange)="slotChange($event)" name="navigation">
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <a
+            [routerLinkActiveOptions]="{exact:true}"
+            href="/"
+            routerLink="/"
+            routerLinkActive="active-link"
+          >
+            {{ home }}
+          </a>
+        </li>
+        <li>
+          <a
+            [routerLinkActiveOptions]="{exact:true}"
+            href="/articles"
+            routerLink="/articles"
+            routerLinkActive="active-link"
+          >
+            {{ articles }}
+          </a>
+        </li>
+        <li>
+          <a
+            [routerLinkActiveOptions]="{exact:true}"
+            href="/rates"
+            routerLink="/rates"
+            routerLinkActive="active-link"
+          >
+            {{ rates }}
+          </a>
+        </li>
+        <li>
+            <a
+              [routerLinkActiveOptions]="{exact:true}"
+              href="/admin"
+              routerLink="/admin"
+              routerLinkActive="active-link"
+            >
+              {{ admin }}
+            </a>
+          </li>
+      </ul>
+    </nav>
+  </header>
+</slot>

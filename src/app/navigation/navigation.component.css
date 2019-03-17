@@ -1,0 +1,15 @@
+nav li {
+  display: inline-block;
+  list-style: none;
+}
+
+nav a {
+  background-color: #ccc;
+  color: black;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+nav a.active-link {
+  background-color: #aaa;
+}
