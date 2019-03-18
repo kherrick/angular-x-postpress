@@ -16,6 +16,7 @@ export class RatesComponent implements OnInit {
 
   constructor(private apollo: Apollo) {}
 
+
   ngOnInit() {
     this.apollo
       .watchQuery({
