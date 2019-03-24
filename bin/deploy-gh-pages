@@ -1,15 +1,29 @@
 #!/usr/bin/env bash
 
 readonly PROJECT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/.."
+declare BASE_URL
 
 cd "${PROJECT_ROOT}" || exit 1
 
 rm -rf ./dist ./node_modules && npm i || exit 1
 
+if [[ -z "$1" ]]; then
+  BASE_URL="/angular-x-postpress/#/"
+else
+  BASE_URL="$1"
+fi
+
 # apply hash routing patch for gh-pages, and build
 sed -i.bak 's/RouterModule.forRoot(routes)/RouterModule.forRoot(routes, { useHash: true })/g' ./src/app/app-routing.module.ts \
-  && npm run build:client-for-gh-pages \
+  && npm run build:client-for-gh-pages -- "$BASE_URL" \
   && mv ./src/app/app-routing.module.ts.bak ./src/app/app-routing.module.ts \
+  || exit 1
+
+# update scope and start_url in manifest
+sed -i.bak "s|\"scope\": \"/\"|\"scope\": \"$BASE_URL\"|g" ./dist/browser/manifest.webmanifest \
+  || exit 1
+
+sed -i.bak "s|\"start_url\": \"/\"|\"start_url\": \"$BASE_URL\"|g" ./dist/browser/manifest.webmanifest \
   || exit 1
 
 # touch no jekyll file to get node_modules, and deploy the bundle

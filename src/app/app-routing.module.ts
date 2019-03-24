@@ -24,7 +24,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     SharedModule.forRoot(),
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes, { useHash: true })
   ],
   exports: [RouterModule]
 })
